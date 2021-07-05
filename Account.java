@@ -14,11 +14,7 @@ public class Account {
 		this.account = human.getAccount();
 		this.bank = bank;
 		this.human = human;
-		Card card = new Card();
-		card.makeCard(this);
-		this.uuid = card.getUUID();
 		
-		this.Card = human.getName() + bank.getName();
 	}
 	
 	public void outPut(int money) {
@@ -60,4 +56,21 @@ public class Account {
 		return this.Card;
 	}
 	
+	public int getUUID() {
+		return this.uuid;
+	}
+	
+	public void makeCard() {
+		Card card = new Card();
+		card.makeCard(this);
+		this.uuid = card.getUUID();
+	}
+	
+	public String getAccount() {
+		return this.account;
+	}
+	
+	public int getCash() {
+		return cash;
+	}
 }
